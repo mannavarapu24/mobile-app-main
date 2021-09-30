@@ -12,12 +12,12 @@ The code works for both the platforms IOS and Android
 
 ## Complilation Instructions
 
--To create a flutter project flutter create totrash
--To clone this project git clone git@github.com/totrash.git
--To check different versions of it git checkout [branch name]
--To run the project successfully without any errors flutter run --no-sound-null-safety
--To build apk file, from root directory of project flutter build apk --split-per-abi --no-sound-null-safety
--special mention: This app is unstable in lates android version.
+-To create a flutter project flutter create totrash<br>
+-To clone this project git clone git@github.com:mannavarapu24/totrash.git<br>
+-To check different versions of it git checkout [branch name]<br>
+-To run the project successfully without any errors flutter run --no-sound-null-safety<br>
+-To build apk file, from root directory of project flutter build apk --split-per-abi --no-sound-null-safety<br>
+-special mention: This app is unstable in lates android version.<br>
 
 ## POST App Screenshots for every screen
 ## Splash screen and Login
