@@ -1,6 +1,7 @@
 # POST
 
-This Flutter Application brings users and admin to onepage where admin has rights to post anything that is in text format. Users can access the post-wall to view the admin's posts. 
+This Flutter Application brings users and admin to onepage where admin has rights to post anything that is in text format. Users can access the post-wall to view the admin's posts. <br>
+The code works for both the platforms IOS and Android
 
 ## Getting Started
 
@@ -41,6 +42,7 @@ Admin can create posts with messages and click on button 'Add messsage'.<br>
 
 ## Added Post
 After adding messages we can see all the posts.<br>
+All loggged in users can see the posts.<br>
 <img src="https://user-images.githubusercontent.com/82296447/135518391-1488c401-4afa-4532-9704-040a1e44e705.JPG" alt="Posts" width="150" height="300">
 
 
