@@ -5,9 +5,19 @@ The code works for both the platforms IOS and Android
 
 ## Getting Started
 
-- Install Flutter 
+- Install Android Studio
+- Install Flutter
 - Install all Flutter Dependencies mention in 'flutter doctor'
 - To view the admin page, change the default admin email in the admin-message.dart to your email. 
+
+## Complilation Instructions
+
+-To create a flutter project flutter create totrash
+-To clone this project git clone git@github.com/totrash.git
+-To check different versions of it git checkout [branch name]
+-To run the project successfully without any errors flutter run --no-sound-null-safety
+-To build apk file, from root directory of project flutter build apk --split-per-abi --no-sound-null-safety
+-special mention: This app is unstable in lates android version.
 
 ## POST App Screenshots for every screen
 ## Splash screen and Login
