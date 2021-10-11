@@ -17,6 +17,9 @@ class _RegisterState extends State<Register> {
   String eMail = "";
   String password = "";
   String userName = "";
+  String Bio = "";
+  String age = "";
+  String HomeTown = "";
   FirebaseFirestore _firestore = FirebaseFirestore.instance;
   String currentEmail = "mahalakshmiammalu@gmail.com";
 
@@ -96,14 +99,14 @@ class _RegisterState extends State<Register> {
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
+                            borderRadius: BorderRadius.circular(25),
                             color: Color.fromRGBO(229, 229, 229, 0.6),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(1.0),
                             child: TextField(
                               onChanged: (value) {
-                                firstName = value;
+                                userName = value;
                               },
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 20),
@@ -131,7 +134,7 @@ class _RegisterState extends State<Register> {
                             padding: const EdgeInsets.all(1.0),
                             child: TextField(
                               onChanged: (value) {
-                                lastName = value;
+                                firstName = value;
                               },
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 20),
@@ -141,7 +144,118 @@ class _RegisterState extends State<Register> {
                                 enabledBorder: InputBorder.none,
                                 errorBorder: InputBorder.none,
                                 disabledBorder: InputBorder.none,
-                                hintText: "Last Name",
+                                hintText: "Last Name ",
+                                hintStyle: TextStyle(
+                                  color: Color(0xff303030),
+                                  fontSize: size.width * 0.042,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Color.fromRGBO(229, 229, 229, 0.6),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: TextField(
+                              onChanged: (value) {
+                                Bio = value;
+                              },
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                disabledBorder: InputBorder.none,
+                                hintText: "Bio",
+                                hintStyle: TextStyle(
+                                  color: Color(0xff303030),
+                                  fontSize: size.width * 0.042,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Color.fromRGBO(229, 229, 229, 0.6),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: TextField(
+                              onChanged: (value) {
+                                userName = value;
+                              },
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                disabledBorder: InputBorder.none,
+                                hintText: "Username",
+                                hintStyle: TextStyle(
+                                  color: Color(0xff303030),
+                                  fontSize: size.width * 0.042,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Color.fromRGBO(229, 229, 229, 0.6),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: TextField(
+                              onChanged: (value) {
+                                HomeTown = value;
+                              },
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                disabledBorder: InputBorder.none,
+                                hintText: "HomeTown",
+                                hintStyle: TextStyle(
+                                  color: Color(0xff303030),
+                                  fontSize: size.width * 0.042,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Color.fromRGBO(229, 229, 229, 0.6),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: TextField(
+                              onChanged: (value) {
+                                age = value;
+                              },
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                disabledBorder: InputBorder.none,
+                                hintText: "Age",
                                 hintStyle: TextStyle(
                                   color: Color(0xff303030),
                                   fontSize: size.width * 0.042,
@@ -219,7 +333,10 @@ class _RegisterState extends State<Register> {
                                 'password': password,
                                 'firstName': firstName,
                                 'lastName': lastName,
-                                'email': eMail
+                                'email': eMail,
+                                'HomeTown' : HomeTown,
+                                'Bio': Bio,
+                                'Age': age,
                               });
                               Navigator.pushNamed(context, '/admin');
                             } catch (e) {

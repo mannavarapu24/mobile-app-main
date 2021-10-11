@@ -36,7 +36,7 @@ class _AddMessageState extends State<AddMessage> {
                 width: size.width * 0.28,
                 child: Align(
                   alignment: Alignment.topRight,
-                  child:  FlatButton(
+                  child:  ElevatedButton(
                       onPressed: () => showDialog<String>(
                           context: context,
                           builder:(BuildContext context) =>  Padding(

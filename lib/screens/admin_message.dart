@@ -24,6 +24,7 @@ class _AdminMessageState extends State<AdminMessage> {
     getCurrentUser();
   }
 
+
   void getCurrentUser() async {
     final user = _auth.currentUser!;
     loggedInUser = user;
@@ -174,7 +175,11 @@ class _AdminMessageState extends State<AdminMessage> {
 
                           for (var message in messages!.docs) {
                             var text = message["message"];
+                            var bio = message["Bio"];
+                            var age = message["age"];
+                            var HomeTown = message ["HomeTown"];
                             var msgStamp = message["date"];
+                            var username = message["username"];
                             var msgDate = msgStamp.toDate().day.toString();
                             var msgMonth =
                                 DateFormat('MMMM').format(msgStamp.toDate());

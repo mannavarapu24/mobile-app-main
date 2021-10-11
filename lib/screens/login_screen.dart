@@ -18,6 +18,7 @@ class _LogInState extends State<LogIn> {
 
   final _auth = FirebaseAuth.instance;
   GoogleSignIn _googleSignIn = GoogleSignIn();
+
   Future<void> _handleGoogle() async {
     try {
       final googleUser = await _googleSignIn.signIn();
@@ -55,7 +56,9 @@ class _LogInState extends State<LogIn> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
@@ -181,7 +184,7 @@ class _LogInState extends State<LogIn> {
                                   padding: EdgeInsets.all(9),
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
                                         'Sign In with Google',
